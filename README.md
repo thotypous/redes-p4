@@ -1,10 +1,10 @@
-# Camada de enlace – SLIP
+# Camada de enlace (L2) – SLIP
 
 Nesta prática, vamos implementar o SLIP, um protocolo de camada de enlace muito simples que funciona sobre linhas seriais. O SLIP é definido pela [RFC 1055](https://tools.ietf.org/html/rfc1055), que tem apenas 6 páginas (e isso incluindo exemplos de código em C)!
 
-Sua implementação deve ser realizada no arquivo `slip.py`, que já veio com um esqueleto em cima do qual você vai construir o seu código.
+Sua implementação deve ser realizada no arquivo [slip.py](slip.py), que já veio com um esqueleto em cima do qual você vai construir o seu código. **NÃO MODIFIQUE O CONTEÚDO DOS OUTROS ARQUIVOS**.
 
-Para testar seu código, execute `./run-grader`. Cada um dos testes vai usar a sua implementação como uma biblioteca, verificando se ela apresenta o comportamento esperado.
+Para testar seu código, execute `python -m unittest` para rodar todos os testes, ou `python -m unittest tests.testX` para rodar um teste específico (onde X é o número do passo).
 
 ## Passo 1 — 2 pontos
 
@@ -50,10 +50,10 @@ finally:
     # pedaços do datagrama em nenhum buffer mantido por você
 ```
 
-## Adiante o seu T5!
+## Adiante a prática final!
 
 O arquivo `exemplo_integracao.py` gruda todas as camadas implementadas até o momento, disponibilizando uma implementação completa de TCP/IP/SLIP que funciona totalmente à parte da implementação do *kernel* Linux.
 
 O Linux também possui uma implementação de SLIP, então é possível colocar ambas as implementações para conversar, como se fossem máquinas diferentes (mesmo que estejam executando no mesmo computador). Para fazer isso, execute `./exemplo_integracao.py` e siga as instruções da tela.
 
-Para adiantar o seu T5, modifique o arquivo `exemplo_integracao.py` para implementar a sua camada de aplicação, assim como você talvez já tenha feito nos Trabalhos 2 e 3.
+Para adiantar a sua prática final, modifique o arquivo `exemplo_integracao.py` para implementar a sua camada de aplicação, assim como você talvez já tenha feito nas duas práticas anteriores.
